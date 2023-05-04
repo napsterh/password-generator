@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Password Generator</title>
+   <title>Generador de Contraseña</title>
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,14 +12,33 @@
       <div class="pw-header">
          <div class="pw">
             <span id="pw">l823Zs78#Css09@<</span>
-            <button id="copy">Copy</button>
+            <button id="copy">Copiar</button>
          </div>
       </div>
       <div class="pw-body">
          <div class="form-control">
-            <label for="len">Password Length</label>
+            <label for="len">Tamaño de contraseña</label>
             <input id="len" value="15" type="number" min="2" max="30">
          </div>
+         <div class="form-control">
+            <label for="upper">Contiene letras mayusculas</label>
+            <input id="upper" type="checkbox" />
+         </div>
+         <div class="form-control">
+            <label for="lower">Contiene letras minusculas</label>
+            <input id="lower" type="checkbox" />
+         </div>
+         <div class="form-control">
+            <label for="number">Contiene números</label>
+            <input id="number" type="checkbox" />
+         </div>
+         <div class="form-control">
+            <label for="symbol">Contiene simbolos</label>
+            <input id="symbol" type="checkbox" />
+         </div>
+         <button class="generate" id="generate">
+            Generar Contraseña
+         </button>
       </div>
    </div>
 
