@@ -77,6 +77,8 @@ const generateX = () => {
       xs.push(getSymbol());
   }
 
+  if (xs.length === 0) return "";
+
    return xs[Math.floor(Math.random() * xs.length)];
 }
 
