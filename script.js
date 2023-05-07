@@ -73,6 +73,10 @@ const generateX = () => {
       xs.push(getNumber());
    }
 
+   if (symbolEl.checked) {
+      xs.push(getSymbol());
+  }
+
    return xs[Math.floor(Math.random() * xs.length)];
 }
 
