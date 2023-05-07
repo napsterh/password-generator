@@ -62,20 +62,20 @@ const generatePassword = () => {
 const generateX = () => {
    const xs = [];
    if(upperEl.checked){
-      xs.push(getUpperCase());
-   }
+         xs.push(getUpperCase());
+      }
 
-   if(lowerEl.checked){
-      xs.push(getLowerCase());
-   }
+      if(lowerEl.checked){
+         xs.push(getLowerCase());
+      }
 
-   if (numberEl.checked) {
-      xs.push(getNumber());
-   }
+      if (numberEl.checked) {
+         xs.push(getNumber());
+      }
 
-   if (symbolEl.checked) {
-      xs.push(getSymbol());
-  }
+      if (symbolEl.checked) {
+         xs.push(getSymbol());
+   }
 
   if (xs.length === 0) return "";
 
@@ -85,46 +85,20 @@ const generateX = () => {
 generateEl.addEventListener( "click", generatePassword )
 
 
-/*
+const copyGenerate = () => {
+   const textarea = document.createElement("textarea");
+   const password = pwEl.innerText;
 
-function generateX() {
-    const xs = [];
-    if (upperEl.checked) {
-        xs.push(getUppercase());
-    }
+   if(!password){
+      return;
+   }
 
-    if (lowerEl.checked) {
-        xs.push(getLowercase());
-    }
-
-    if (numberEl.checked) {
-        xs.push(getNumber());
-    }
-
-    if (symbolEl.checked) {
-        xs.push(getSymbol());
-    }
-
-    if (xs.length === 0) return "";
-
-    return xs[Math.floor(Math.random() * xs.length)];
+   textarea.value = password;
+   document.body.appendChild(textarea);
+   textarea.select();
+   document.execCommand("copy");
+   textarea.remove();
+   alert("Contraseña copiada en papelera");
 }
 
-generateEl.addEventListener("click", generatePassword);
-
-copyEl.addEventListener("click", () => {
-    const textarea = document.createElement("textarea");
-    const password = pwEl.innerText;
-
-    if (!password) {
-        return;
-    }
-
-    textarea.value = password;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand("copy");
-    textarea.remove();
-    alert("Password copied to clipboard");
-});
-*/
+copyEl.addEventListener("click", copyGenerate)
