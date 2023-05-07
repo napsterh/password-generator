@@ -69,10 +69,15 @@ const generateX = () => {
       xs.push(getLowerCase());
    }
 
+   if (numberEl.checked) {
+      xs.push(getNumber());
+   }
+
    return xs[Math.floor(Math.random() * xs.length)];
 }
 
 generateEl.addEventListener( "click", generatePassword )
+
 
 /*
 
